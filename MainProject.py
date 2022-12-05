@@ -95,3 +95,16 @@ while True:
 		x = random.randint(-270, 270)
 		y = random.randint(-270, 270)
 		apple.goto(x, y)
+
+		growth = turtle.Turtle()
+		growth.speed(0)
+		growth.shape("circle")
+		growth.color("brown")
+		growth.penup()
+		Bodyplus.append(growth)
+		delay -= 0.002
+		score += 10
+		if score > high_score:
+			high_score = score
+		pen.clear()
+		pen.write("Score : {} High Score : {} ".format(score, high_score), align="center", font = 10)

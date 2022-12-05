@@ -6,6 +6,6 @@ Prpject: Snake Game
 2. Create Snake - Complete
 3. Create Apple - Complete
 4. Make Snake Move - Complete
-5. Make Snake grow with Apple - in progress
-6. Have a Game over
+5. Make Snake grow with Apple - complete
+6. Have a Game over - working on body collision
 7. Profit

@@ -21,4 +21,12 @@ snake.penup()
 snake.goto(0, 0)
 snake.direction = "Stop"
 
+#Apple
+apple = turtle.Turtle()
+apple.color("red")
+apple.shape("circle")
+apple.speed()
+apple.penup()
+apple.goto(0, 100)
+
 turtle.done()

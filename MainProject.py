@@ -108,3 +108,28 @@ while True:
 			high_score = score
 		pen.clear()
 		pen.write("Score : {} High Score : {} ".format(score, high_score), align="center", font = 10)
+	for index in range(len(Bodyplus)-1, 0, -1):
+		x = Bodyplus[index-1].xcor()
+		y = Bodyplus[index-1].ycor()
+		Bodyplus[index].goto(x, y)
+	if len(Bodyplus) > 0:
+		x = snake.xcor()
+		y = snake.ycor()
+		Bodyplus[0].goto(x, y)
+	move()
+	for Body in Bodyplus:
+		if Body.distance(snake) < 20:
+			time.sleep(1)
+			snake.goto(0, 0)
+			snake.direction = "stop"
+			for Body in Bodyplus:
+				Body.goto(1000, 1000)
+			Body.clear()
+
+			score = 0
+			delay = 0.1
+			pen.clear()
+			pen.write("Score : {} High Score : {} ".format(score, high_score), align="center", font = 10)
+	time.sleep(delay)
+
+window.mainloop()

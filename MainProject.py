@@ -73,8 +73,8 @@ def move():
 
 window.listen()
 window.onkeypress(group, "w")
-window.onkeypress(group, "s")
-window.onkeypress(group, "a")
-window.onkeypress(group, "d")
+window.onkeypress(movedown, "s")
+window.onkeypress(moveleft, "a")
+window.onkeypress(moveright, "d")
 
 turtle.done()

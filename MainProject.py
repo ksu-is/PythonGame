@@ -37,8 +37,7 @@ pen.color("white")
 pen.penup()
 pen.hideturtle()
 pen.goto(0, 250)
-pen.write("Score : 0 High Score : 0", align="center",
-		font=("ariel", 24, "bold"))
+pen.write("Score : 0 High Score : 0", align="center", font=10)
 
 #Movement
 def group(): 
@@ -77,4 +76,22 @@ window.onkeypress(movedown, "s")
 window.onkeypress(moveleft, "a")
 window.onkeypress(moveright, "d")
 
-turtle.done()
+Bodyplus = []
+
+while True:
+	window.update()
+	if snake.xcor() > 290 or snake.xcor() < -290 or snake.ycor() > 290 or snake.ycor() < -290:
+		time.sleep(1)
+		snake.goto(0, 0)
+		snake.direction = "Stop"
+		for Body in Bodyplus:
+			Body.goto(1000, 1000)
+		Bodyplus.clear()
+		score = 0
+		delay = 0.1
+		pen.clear()
+		pen.write("Score : {} High Score : {} ".format(score, high_score), align="center", font = 10)
+	if snake.distance(apple) < 20:
+		x = random.randint(-270, 270)
+		y = random.randint(-270, 270)
+		apple.goto(x, y)
